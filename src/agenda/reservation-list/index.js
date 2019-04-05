@@ -34,6 +34,8 @@ class ReactComp extends Component {
 
     selectedDay: PropTypes.instanceOf(XDate),
     topDay: PropTypes.instanceOf(XDate),
+
+    listTitle: PropTypes.string
   };
 
   constructor(props) {
@@ -199,7 +201,7 @@ class ReactComp extends Component {
     }
     return (
       <View style={{marginBottom: 54}}>
-        <Text style={styles.eventsDayTitle}>Events of the Day</Text>
+        <Text style={styles.eventsDayTitle}>{this.props.listTitle}</Text>
       <FlatList
         ref={(c) => this.list = c}
         style={this.props.style}
