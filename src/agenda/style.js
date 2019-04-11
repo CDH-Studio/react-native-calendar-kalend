@@ -41,7 +41,8 @@ export default function styleConstructor(theme = {}) {
     reservations: {
       flex: 1,
       marginTop: 104,
-      backgroundColor: appStyle.backgroundColor
+      backgroundColor: appStyle.backgroundColor,
+        paddingHorizontal: 20
     },
     ...(theme[STYLESHEET_ID] || {})
   });
